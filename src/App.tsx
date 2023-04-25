@@ -1,10 +1,15 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LoginComponent from './Components/LoginComponent/LoginComponent';
+
 
 function App() {
   return (
-    <div>
-
-    </div>
+    <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<LoginComponent />} />      
+        </Routes>
+      </BrowserRouter>
   );
 }
 
