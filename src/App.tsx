@@ -1,5 +1,6 @@
 import './App.css';
-import './Components/LoginComponent/LoginComponent.css'
+import CreateAccountComponent from './Components/CreateAccountComponent/CreateAccountComponent';
+import CreateAccountAdminComponent from './Components/CreateanAccountAdminComponent/CreateAccountAdminComponent';import './Components/LoginComponent/LoginComponent.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoginComponent from './Components/LoginComponent/LoginComponent';
 import UsersLogin from './Components/LoginComponent/UsersLogin';
@@ -13,10 +14,15 @@ function App() {
     <BrowserRouter>
         <Routes>
           <Route path='/' element={<LoginComponent/>}/>
-          <Route path='/UsersLogin' element={<UsersLogin/>}/>
-                
+          
+    <Route path='/UsersLogin' element={<UsersLogin/>}/>
+                    <CreateAccountComponent/>
+
         </Routes>
-      </BrowserRouter>
+        </BrowserRouter>
+  
+  
+
   );
 }
 
