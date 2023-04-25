@@ -6,11 +6,8 @@ import './Components/TaskTrackerComponent/TaskTrackerCard.css'
 function App() {
   return (
 <BrowserRouter>
-
 <TaskTrackerComponent/>
-
 <Routes>
-
 </Routes>
 </BrowserRouter>
   );
