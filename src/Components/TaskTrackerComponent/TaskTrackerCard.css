@@ -1,0 +1,61 @@
+.taskCard{
+    margin-top: 15px;
+    background-color: #0C4579;
+    height: 325px;
+    width: 350px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    padding: 10px;
+    color: white;
+    
+}
+
+.editModalButton{
+    cursor: pointer;
+}
+
+.editModalButton:hover{
+    cursor: pointer;
+    color: aliceblue;
+    text-decoration-style: solid;
+}
+
+.descriptionDiv{
+    background-color: rgb(255, 255, 255);
+    height: 50%;
+    padding: 7px;
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.taskTrackerDiv{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #580B65;
+    height: 850px;
+}
+
+.scrollDiv{
+    height: 700px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.scrollDiv::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (min-width: 950px) {
+    .descriptionDiv::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.taskComponentBG{
+    background-color: rgb(20, 27, 54);
+    height: 100vh;
+}
