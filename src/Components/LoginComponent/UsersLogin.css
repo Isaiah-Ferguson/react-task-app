@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Label-Format{
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.bg{
+    font-style: italic;
+    background-color: #0D6EFD !important;
+    height: 45PX;
+}
