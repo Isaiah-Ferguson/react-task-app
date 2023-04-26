@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Row, Col, Button, Container } from 'react-bootstrap';
 import TaskTrackerModal from './TaskTrackerModal';
 import TaskTrackerCard from './TaskTrackerCard';
+import TaskTrackerCardProgress from "./TaskTrackerCardProgress";
+import TaskTrackerCardComplete from "./TaskTrackerCardComplete";
 
 export default function TaskTrackerComponent() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 993);
@@ -47,7 +49,7 @@ export default function TaskTrackerComponent() {
                     <Row>
                         <h1 className='text-center'>In Progress</h1>
                     </Row>
-                    <Row className='d-flex justify-content-center scrollDiv'><TaskTrackerCard/></Row>
+                    <Row className='d-flex justify-content-center scrollDiv'><TaskTrackerCardProgress/></Row>
                 </Col>
                 )}
 
@@ -56,7 +58,7 @@ export default function TaskTrackerComponent() {
                     <Row>
                         <h1 className='text-center'>Complete</h1>
                     </Row>
-                    <Row className='d-flex justify-content-center scrollDiv'><TaskTrackerCard/></Row>
+                    <Row className='d-flex justify-content-center scrollDiv'><TaskTrackerCardComplete/></Row>
                 </Col>)}
                 
             </Row>
