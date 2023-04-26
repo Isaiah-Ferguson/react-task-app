@@ -14,7 +14,6 @@ function App() {
           <Route path='/' element={<LoginComponent/>}/>
           <Route path='/UsersLogin' element={<UsersLogin/>}/>
           <Route path='/CreateAccountComponent' element={<CreateAccountComponent/>} />
-                
         </Routes>
       </BrowserRouter>
   );

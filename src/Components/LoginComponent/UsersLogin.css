@@ -10,7 +10,9 @@
 }
 
 .bg{
-    font-style: italic;
+    color:White !important;
+    font-size: 20px !important;
+    font-style: italic !important;
     background-color: #0D6EFD !important;
-    height: 45PX;
+    height: 45PX !important;
 }
