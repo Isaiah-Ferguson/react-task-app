@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bgimage {
+    background-image: url(../../Assets/4.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.PageTitle {
+    color: white;
+    font-size: 85px;
+    font-style: italic;
+    text-align: center;
+    margin-top: 12%;
+}
+
+.Button1 {
+    font-size: 30px !important;
+    font-style: italic;
+    width: 25%;
+    color: #0702FF;
+    border-radius: 15px !important;
+}
+
+.text-format {
+    color: white;
+    font-size: 25px;
+    font-style: italic;
+    text-decoration: none;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+    text-decoration: none;
+}
+
+
+
+
+@media screen and (max-width: 390px) {
+    .PageTitle {
+        color: white;
+        font-size: 45px;
+        font-style: italic;
+        text-align: center;
+        margin-top: 45%;
+    }
+
+    .Button1 {
+        font-size: 20px !important;
+        font-style: italic;
+        width: 35%;
+        color: #0702FF;
+        border-radius: 15px !important;
+    }
+
+
+}
+
+@media screen and (max-width: 820px) {
+    .PageTitle {
+        color: white;
+        font-size: 45px;
+        font-style: italic;
+        text-align: center;
+        margin-top: 45%;
+    }
+
+    .Button1 {
+        font-size: 20px !important;
+        font-style: italic;
+        width: 35%;
+        color: #0702FF;
+        border-radius: 15px !important;
+    }
+
+
+}
+
+
+
