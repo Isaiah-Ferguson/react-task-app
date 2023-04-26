@@ -26,6 +26,7 @@
     width: 25%;
     color: #0702FF;
     border-radius: 15px !important;
+    border: 1px solid white !important;    
 }
 
 .text-format {

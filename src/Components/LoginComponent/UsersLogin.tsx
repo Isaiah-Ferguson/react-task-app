@@ -18,7 +18,7 @@ export default function UsersLogin() {
                     <Col className='text-center mt-1'>
                         <Form.Group className="mb-1" controlId="formUsername">
                             <Form.Label className='Label-Format'>Username:</Form.Label>
-                            <Form.Control className='text-center w-25 mx-auto bg' type="Text" placeholder="" />
+                            <Form.Control className='text-center mx-auto bg w-50' type="Text" placeholder="" />
                         </Form.Group>
                     </Col>
                 </Row>
@@ -27,8 +27,16 @@ export default function UsersLogin() {
                     <Col className='text-center mt-3'>
                         <Form.Group className="mb-1" controlId="formPassword">
                             <Form.Label className='Label-Format'>Password:</Form.Label>
-                            <Form.Control className='text-center w-25 mx-auto bg' type="Password" placeholder="" />
+                            <Form.Control className='text-center mx-auto bg w-50' type="Password" placeholder="" />
                         </Form.Group>
+                    </Col>
+                </Row>
+
+                <Row className='mt-5'>
+                    <Col className='text-center'>
+                        <Link to="/UsersLogin">
+                            <Button className='Button1'>Submit</Button>
+                        </Link>
                     </Col>
                 </Row>
 
