@@ -1,6 +1,6 @@
 .taskCard{
     margin-top: 15px;
-    background-color: #0C4579;
+    background-color: #643657;
     height: 325px;
     width: 350px;
     border: 2px solid rgba(0, 0, 0, 0.5);
@@ -34,7 +34,7 @@
 .taskTrackerDiv{
     padding: 15px;
     border-radius: 10px;
-    background-color: #580B65;
+    background-color: #371E30;
     height: 850px;
 }
 
@@ -56,6 +56,6 @@
 }
 
 .taskComponentBG{
-    background-color: rgb(20, 27, 54);
+    background-color: #241420;
     height: 100vh;
 }
