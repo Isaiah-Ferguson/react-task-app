@@ -27,7 +27,7 @@ export default function UsersLogin() {
                     <Col className='text-center mt-3'>
                         <Form.Group className="mb-1" controlId="formPassword">
                             <Form.Label className='Label-Format'>Password:</Form.Label>
-                            <Form.Control className='text-center mx-auto bg' type="Password" placeholder="" />
+                            <Form.Control className='text-center mx-auto bg bg2' type="Password" placeholder="" />
                         </Form.Group>
                     </Col>
                 </Row>
