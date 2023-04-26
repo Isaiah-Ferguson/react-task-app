@@ -9,7 +9,7 @@ interface userData {
 
   async function createAccount(CreatedUser : object) {
       //We want to target our User Controller
-      const res = await fetch('https://tasktrackerbackendapi.azurewebsites.net/adduser',{
+      const res = await fetch('https://tasktrackerbackendapi.azurewebsites.net/User/adduser',{
           method:"POST",
           headers:{
               'Content-Type':"application/json"
@@ -25,7 +25,7 @@ interface userData {
   }
   
   async function login(loginUser : object) {
-      const res = await fetch('https://tasktrackerbackendapi.azurewebsites.net/login',{
+      const res = await fetch('https://tasktrackerbackendapi.azurewebsites.net/User/login',{
           method:"POST",
           headers:{
               'Content-Type':"application/json"
@@ -42,7 +42,7 @@ interface userData {
   }
   
   async function GetLoggedInUserData(username: string) {
-      let res = await fetch(`https://tasktrackerbackendapi.azurewebsites.net/userbyusername/{username}`)
+      let res = await fetch(`https://tasktrackerbackendapi.azurewebsites.net/User/userbyusername/{username}`)
       let data = await res.json();
       userData = data;
       return userData;
