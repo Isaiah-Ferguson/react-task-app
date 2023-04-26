@@ -15,6 +15,8 @@
     font-style: italic !important;
     background-color: #0D6EFD !important;
     height: 45PX !important;
+    width: 45% !important;
+
 }
 
 
@@ -42,7 +44,7 @@
         font-style: italic !important;
         background-color: #0D6EFD !important;
         height: 45PX !important;
-        
+        width: 55% !important;
     }
 
 
@@ -72,7 +74,8 @@
         font-style: italic !important;
         background-color: #0D6EFD !important;
         height: 45PX !important;
-        
+        width: 45% !important;
+
     }
 
 
