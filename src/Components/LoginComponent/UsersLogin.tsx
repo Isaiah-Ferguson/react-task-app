@@ -1,10 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
 
 export default function UsersLogin() {
+
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+
     return (
         <div className='bgimage'>
             <Container>
