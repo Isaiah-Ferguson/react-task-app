@@ -7,7 +7,7 @@ export default function TaskTrackerCard() {
         <div className='taskCard'>
         <Row>
             <Col>
-            <li>Progress</li>
+            <li>To Do</li>
             </Col>
             <Col className='d-flex justify-content-end'>
             <TaskTrackerEditModal/>
@@ -15,7 +15,7 @@ export default function TaskTrackerCard() {
         </Row>
         <Row>
             <Col><h4>Task Title</h4></Col>
-            <Col><h5>User Name</h5></Col>
+            <Col className='d-flex justify-content-end'><h5>User Name</h5></Col>
         </Row>
         <div>
             <h3 style={{color: '#D3C7C7'}}>Description</h3>

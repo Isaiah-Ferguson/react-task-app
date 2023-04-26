@@ -9,7 +9,7 @@ interface userData {
 
   async function createAccount(CreatedUser : object) {
       //We want to target our User Controller
-      const res = await fetch('',{
+      const res = await fetch('https://tasktrackerbackendapi.azurewebsites.net/adduser',{
           method:"POST",
           headers:{
               'Content-Type':"application/json"
@@ -25,7 +25,7 @@ interface userData {
   }
   
   async function login(loginUser : object) {
-      const res = await fetch('',{
+      const res = await fetch('https://tasktrackerbackendapi.azurewebsites.net/login',{
           method:"POST",
           headers:{
               'Content-Type':"application/json"
@@ -42,14 +42,14 @@ interface userData {
   }
   
   async function GetLoggedInUserData(username: string) {
-      let res = await fetch(``)
+      let res = await fetch(`https://tasktrackerbackendapi.azurewebsites.net/userbyusername/{username}`)
       let data = await res.json();
       userData = data;
       return userData;
   }
 
 async function addTaskItem(taskItem: object) {
-    const res = await fetch('',{
+    const res = await fetch('https://tasktrackerbackendapi.azurewebsites.net',{
         method:"POST",
         headers:{
             'Content-Type':"application/json"
@@ -65,7 +65,7 @@ async function addTaskItem(taskItem: object) {
 }
 
 async function updateTaskItem(taskItem : object) {
-    const res = await fetch('',{
+    const res = await fetch('https://tasktrackerbackendapi.azurewebsites.net',{
         method:"PUT",
         headers:{
             'Content-Type':"application/json"
@@ -80,3 +80,16 @@ async function updateTaskItem(taskItem : object) {
     return data;
 }
 
+async function getTaskItems() {
+    let res = await fetch(`https://tasktrackerbackendapi.azurewebsites.net`)
+    let data = await res.json();
+    return data;
+}
+
+async function getUserInfoByID(userId: number) {
+    let res = await fetch(``)
+    let userInfoData = await res.json();
+    return userInfoData;
+}
+
+export { getTaskItems, GetLoggedInUserData, login, createAccount, updateTaskItem, getUserInfoByID, addTaskItem}

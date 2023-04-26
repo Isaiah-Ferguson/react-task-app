@@ -35,7 +35,7 @@
     padding: 15px;
     border-radius: 10px;
     background-color: #371E30;
-    height: 850px;
+    height: 800px;
 }
 
 .scrollDiv{
@@ -57,5 +57,14 @@
 
 .taskComponentBG{
     background-image: url('../../Assets/5.jpg');
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.whiteText{
+    color: white;
 }
