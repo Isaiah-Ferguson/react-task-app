@@ -7,7 +7,7 @@ export default function TaskTrackerCard() {
         <div className='taskCard'>
         <Row>
             <Col>
-            <li>To Do</li>
+            <li>Complete</li>
             </Col>
             <Col className='d-flex justify-content-end'>
             <TaskTrackerEditModal/>

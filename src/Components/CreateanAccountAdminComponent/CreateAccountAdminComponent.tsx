@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 export default function CreateAccountAdminComponent() {
   return (
-    <div className="background">
+    <div className="background1">
       <Container>
 
         <Row>

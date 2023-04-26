@@ -1,6 +1,6 @@
 .taskCard{
     margin-top: 15px;
-    background-color: #0C4579;
+    background-color: #643657;
     height: 325px;
     width: 350px;
     border: 2px solid rgba(0, 0, 0, 0.5);
@@ -34,8 +34,8 @@
 .taskTrackerDiv{
     padding: 15px;
     border-radius: 10px;
-    background-color: #580B65;
-    height: 850px;
+    background-color: #371E30;
+    height: 800px;
 }
 
 .scrollDiv{
@@ -56,6 +56,15 @@
 }
 
 .taskComponentBG{
-    background-color: rgb(20, 27, 54);
+    background-image: url('../../Assets/5.jpg');
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.whiteText{
+    color: white;
 }

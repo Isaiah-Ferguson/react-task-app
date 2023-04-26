@@ -31,8 +31,9 @@ function TaskTrackerModal() {
           <Col>
           <Form>
               <Form.Select value={viewable} onChange={handleChange}>
-                <option value="In House Open Mat">To Do</option>
-                <option value="public">In Progress</option>
+              <option value="To Do">To Do</option>
+                  <option value="In Progress">In Progress</option>
+                  <option value="Complete">Complete</option>
               </Form.Select>
             </Form>
           </Col>
