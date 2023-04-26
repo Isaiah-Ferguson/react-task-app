@@ -4,12 +4,15 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
 export default function CreateAccountComponent() {
   return (
       <Container>
          <div className="background2">
         <Row>
           <Col><div className="header">Create Account</div></Col>
+          </Row>
+          <Row>
           <Col>
             <Form className="form1">
               <Form.Group  controlId="formBasicEmail">
@@ -28,7 +31,6 @@ export default function CreateAccountComponent() {
               </Form.Group>
               <Form.Group  controlId="formBasicCheckbox">
               </Form.Group>
-
             </Form>
             <div className="Submitbutton"  >
             <Button className="Submitbutton1">
@@ -36,9 +38,7 @@ export default function CreateAccountComponent() {
           </Button>
           </div>
           </Col>
-
-
-        </Row>
+          </Row>
         </div>
       </Container>
 
