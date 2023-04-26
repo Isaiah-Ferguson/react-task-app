@@ -4,7 +4,7 @@ import './Components/LoginComponent/UsersLogin.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoginComponent from './Components/LoginComponent/LoginComponent';
 import UsersLogin from './Components/LoginComponent/UsersLogin';
-import CreateAccountComponent from './Components/CreateAccountComponent'
+import CreateAccountComponent from './Components/CreateAccountComponent/CreateAccountComponent'
 
 
 function App() {
