@@ -1,13 +1,13 @@
 
   .background{
-    background-image:url(../../Assets/7.avif);
+    /* background-image:url(../src/Assets/7.avif); */
   background-size: cover;
   height: 100vh;
   background-position: center center;
     
   }
   .background2{
-    background-image:url(../../Assets/8.avif);
+    /* background-image:url(../../src/Assets/8.avif); */
   background-size: cover;
   height: 100vh;
   background-position: center center;
