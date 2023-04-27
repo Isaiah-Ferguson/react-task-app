@@ -6,9 +6,6 @@ import { Link } from 'react-router-dom'
 
 export default function UsersLogin() {
 
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
-
     return (
         <div className='bgimage'>
             <Container>
@@ -38,7 +35,7 @@ export default function UsersLogin() {
 
                 <Row className='mt-5'>
                     <Col className='text-center'>
-                        <Link to="/UsersLogin">
+                        <Link to="/TaskTrackerComponent">
                             <Button className='Button1'>Submit</Button>
                         </Link>
                     </Col>

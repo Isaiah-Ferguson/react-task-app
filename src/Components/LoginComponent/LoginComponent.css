@@ -63,6 +63,15 @@ a:active {
         border-radius: 15px !important;
     }
 
+    .bgimage {
+        background-image: url(../../Assets/4.jpg);
+        background-position-x: -850px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+
 
 }
 
@@ -81,6 +90,15 @@ a:active {
         width: 35%;
         color: #0702FF;
         border-radius: 15px !important;
+    }
+
+    .bgimage {
+        background-image: url(../../Assets/4.jpg);
+        background-position-x: -850px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        min-width: 100vw;
     }
 
 
