@@ -42,7 +42,7 @@ interface userData {
   }
   
   async function GetLoggedInUserData(username: string) {
-      let res = await fetch(`https://tasktrackerbackendapi.azurewebsites.net/User/userbyusername/{username}`)
+      let res = await fetch(`https://tasktrackerbackendapi.azurewebsites.net/User/userbyusername/${username}`)
       let data = await res.json();
       userData = data;
       return userData;
