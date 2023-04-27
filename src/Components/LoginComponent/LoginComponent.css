@@ -58,7 +58,7 @@ a:active {
     .Button1 {
         font-size: 20px !important;
         font-style: italic;
-        width: 35%;
+        width: 35% !important;
         color: #0702FF;
         border-radius: 15px !important;
     }
