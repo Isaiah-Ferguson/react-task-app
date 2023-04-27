@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Components/TaskTrackerComponent/TaskTrackerCard.css'
 import './Components/LoginComponent/LoginComponent.css'
 import './Components/LoginComponent/UsersLogin.css'
+import CreateAccountComponent from './Components/CreateAccountComponent/CreateAccountComponent';
 
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/' element={<LoginComponent/>}/>          
           <Route path='/UsersLogin' element={<UsersLogin/>}/>
           <Route path='/TaskTrackerComponent' element={<TaskTrackerComponent/>} />
+          <Route path='/CreateAccountComponent' element={<CreateAccountComponent/>} />
 
         </Routes>
         </BrowserRouter>
