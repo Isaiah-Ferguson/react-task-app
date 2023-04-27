@@ -1,28 +1,15 @@
-
-  .background{
-    /* background-image:url(../src/Assets/7.avif); */
+/* 
+  .background1{
+  background-image:url(../../Assets/7.avif);
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
   background-position: center center;
     
   }
-  .background2{
-    /* background-image:url(../../src/Assets/8.avif); */
-  background-size: cover;
-  height: 100vh;
-  background-position: center center;
-    
-  }
+  
   .header{
-    color: aliceblue;
-    text-align: center;
-    padding: 2rem;
-    font-family: 'Roboto', sans-serif;
-  font-style: italic;
-  font-weight: 500;
-  font-style: italic;
-  font-size: 5rem;
-  padding-top: 4rem;
+   
   
   
   
@@ -31,9 +18,8 @@
   .form1{
     color: aliceblue;
     text-align: center;
-  
-  
   }
+ 
   .input{
   width: 20rem;
   height: 3rem;
@@ -43,6 +29,10 @@
   border: #0702FF;
   text-align: center;
   
+  }
+  .input2{
+    width: 20rem;
+    
   }
   .Submitbutton{
   text-align: center;
@@ -65,3 +55,65 @@
     font-weight: 500;
   
   }
+   */
+   .background2{
+    background-image:url(../../Assets/7.avif);
+    background-size: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-position: center center;
+      
+    }
+    .header{
+      color: aliceblue;
+      text-align: center;
+      padding: 2rem;
+      font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 5rem;
+    padding-top: 4rem;
+    }
+ 
+    .form1{
+      color: aliceblue;
+      display: flex;
+flex-direction: column;
+align-items: center;
+    }
+    .input{
+      width: 20rem;
+      height: 3rem;
+      border-radius: 1rem;
+      background-color: #0702FF;
+      color: aliceblue;
+      border: #0702FF;
+      text-align: center;
+      
+      }
+      .input2{
+        width: 20rem;
+ 
+      }
+      .Submitbutton1{
+        width: 20rem;
+        height: 3rem;
+        border-radius: 1rem;
+        border: white;
+        font-weight: 700;
+        font-size: x-large;
+        
+        }
+        .inputtoptext{
+          font-family: 'Roboto', sans-serif;
+          font-style: italic;
+          font-weight: 500;
+        
+        }
+        .Submitbutton{
+          text-align: center;
+          padding: 4rem;
+          
+          
+          }
