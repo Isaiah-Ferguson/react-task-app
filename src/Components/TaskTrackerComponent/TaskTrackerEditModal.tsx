@@ -25,6 +25,11 @@ type Id = {
   
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => { setViewable(event.target.value) };
 
+    const handlePost = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+      setTaskDescription(e.target.value);
+    
+    }
+
     const editTask = () => {
       const testing = async () => {
         let ToDo = false;
@@ -130,7 +135,7 @@ type Id = {
             <Form.Control type="text" placeholder="Enter Asignee's Name" onChange={({ target: { value } }) => setUsername(value)}/>
             </Col>
             <br/>
-            <textarea placeholder="What will you tell your underlings to do..." style={{ borderRadius: 5, height: 100, width: '100%' }}></textarea></Modal.Body>
+            <textarea placeholder="What will you tell your underlings to do..." style={{ borderRadius: 5, height: 100, width: '100%' }} onChange={handlePost}></textarea></Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={deleteTask}>
               Delete
