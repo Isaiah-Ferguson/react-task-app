@@ -50,7 +50,8 @@ export default function TaskTrackerCard() {
             <li>To Do</li>
             </Col>
             <Col className='d-flex justify-content-end'>
-            <TaskTrackerEditModal/>
+
+            <TaskTrackerEditModal Id={item.Id}/>
             </Col>
         </Row>
         <Row>
