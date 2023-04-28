@@ -43,7 +43,7 @@ export default function TaskTrackerCard() {
 
     <>
     {tasks.filter((test) => test.isToDo).map((item: TaskItem, idx: number) => {
-    return (
+      return (
         <div key={idx} className='taskCard'>
         <Row>
             <Col>
@@ -55,13 +55,13 @@ export default function TaskTrackerCard() {
         </Row>
         <Row>
             <Col><h4>{item.title}</h4></Col>
-            <Col className='d-flex justify-content-end'><h5>User Name</h5></Col>
+            <Col className='d-flex justify-content-end'><h5>{item.UserName}</h5></Col>
         </Row>
         <div>
-            <h3 style={{color: '#D3C7C7'}}>Description</h3>
+            <h3 style={{color: '#D3C7C7'}}>{item.title}</h3>
         </div>
         <div className='descriptionDiv'>
-            <p style={{color: 'black'}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil eligendi consectetur libero labore est, cum suscipit sit, cumque vero autem, animi consequuntur voluptate. Ullam corrupti fuga, iusto ab dignissimos beatae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusantium at, consequatur, adipisci reprehenderit dolorum optio facilis dolore eveniet assumenda quod officiis molestias? Alias mollitia enim expedita tempora quisquam beatae.</p>
+            <p style={{color: 'black'}}>{item.description}</p>
         </div>
     </div>
     )
