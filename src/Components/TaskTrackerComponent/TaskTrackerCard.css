@@ -39,7 +39,7 @@
 }
 
 .scrollDiv{
-    height: 700px;
+    height: 600px;
     width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
