@@ -14,6 +14,7 @@ interface TaskItem {
     userName: string;
     description: string;
     title: string;
+    isDeleted: boolean
     // Other properties of a BlogItem
   }
 
@@ -41,7 +42,7 @@ export default function TaskTrackerCardProgress() {
   return (
 
     <>
-    {tasks.reverse().filter((test) => test.isProgress).map((item: TaskItem, idx: number) => {
+    {tasks.reverse().filter((test) => !test.isDeleted).filter((test) => test.isProgress).map((item: TaskItem, idx: number) => {
     return (
         <div key={idx} className='taskCard'>
         <Row>
