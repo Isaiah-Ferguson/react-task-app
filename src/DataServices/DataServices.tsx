@@ -66,7 +66,7 @@ async function addTaskItem(taskItem: object) {
 }
 
 async function updateTaskItem(taskItem : object) {
-    const res = await fetch('https://tasktrackerbackendapi.azurewebsites.net',{
+    const res = await fetch('https://tasktrackerbackendapi.azurewebsites.net/TaskTracker/EditTaskItem',{
         method:"PUT",
         headers:{
             'Content-Type':"application/json"
