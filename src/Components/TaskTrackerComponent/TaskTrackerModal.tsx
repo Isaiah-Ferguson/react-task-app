@@ -23,7 +23,7 @@ function TaskTrackerModal() {
   const [task, setTask] = useState<TaskTracker[]>([]);
   const [taskId, setTaskId] = useState(0);
   const [show, setShow] = useState(false);
-  const [viewable, setViewable] = useState("Select Privacy");
+  const [viewable, setViewable] = useState("To Do");
   const [username, setUsername] = useState('');
   const [title, setTitle]  = useState('');
   const [ taskDescription, setTaskDescription] = useState('');
@@ -57,7 +57,7 @@ function TaskTrackerModal() {
         UserId: userNames.userId,
         Date: new Date,
         title: title,
-        UserName: username,
+        userName: username,
         description: taskDescription,
         isToDo: ToDo,
         isProgress: InProgress,
@@ -68,7 +68,7 @@ function TaskTrackerModal() {
     }
     testing();
     handleClose();
-    window.location.reload();
+    // window.location.reload();
   }
 
 

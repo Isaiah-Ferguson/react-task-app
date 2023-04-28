@@ -11,7 +11,7 @@ interface TaskItem {
     isProgress: boolean;
     isCompleted: boolean;
     isToDo: boolean;
-    UserName: string;
+    userName: string;
     description: string;
     title: string;
     // Other properties of a BlogItem
@@ -56,7 +56,7 @@ export default function TaskTrackerCard() {
         </Row>
         <Row>
             <Col><h4>{item.title}</h4></Col>
-            <Col className='d-flex justify-content-end'><h5>{item.UserName}</h5></Col>
+            <Col className='d-flex justify-content-end'><h5>{item.userName}</h5></Col>
         </Row>
         <div>
             <h3 style={{color: '#D3C7C7'}}>{item.title}</h3>
