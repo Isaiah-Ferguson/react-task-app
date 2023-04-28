@@ -1,19 +1,28 @@
-
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import {Row, Col, Form} from 'react-bootstrap'
+import {Row, Form, Col} from 'react-bootstrap';
+import { Navigate } from 'react-router-dom';
+import { GetLoggedInUserData, updateTaskItem } from '../../DataServices/DataServices';
+import { loggedInData } from '../../DataServices/DataServices';
+
+type Id = {
+   Id: number;
+  }
+
+ export default function TaskTrackerEditModal(props: Id) {
 import { updateTaskItem } from '../../DataServices/DataServices';
 import { loggedInData } from '../../DataServices/DataServices';
 import { type } from 'os';
 type Id ={ Id: number}
 
- export default function TaskTrackerEditModal(props:Id) {
-    const [show, setShow] = useState(false);
-    const [viewable, setViewable] = useState("Select Privacy");
-    const [username, setUsername] = useState('');
-    const [title, setTitle]  = useState('');
-
+  const [taskId, setTaskId] = useState(0);
+  const [show, setShow] = useState(false);
+  const [viewable, setViewable] = useState("To Do");
+  const [username, setUsername] = useState('');
+  const [title, setTitle]  = useState('');
+  const [ taskDescription, setTaskDescription] = useState('');
+    
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [taskId, setTaskId] = useState(0);
@@ -21,37 +30,6 @@ type Id ={ Id: number}
 
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => { setViewable(event.target.value) };
   
-    const EditTask = () => {
-      const testing = async () => {
-        let ToDo = true;
-        let InProgress = true;
-  
-        if(viewable === "To Do"){
-          ToDo = true;
-          InProgress = false;
-        }else{
-          InProgress = true;
-          ToDo = false;
-        }
-        const userNames = loggedInData();
-        const taskItem = {
-          Id: props.Id,
-          UserId: userNames.userId,
-          Date: new Date,
-          title: title,
-          UserName: username,
-          description: taskDescription,
-          isToDo: ToDo,
-          isProgress: InProgress,
-          isCompleted: false
-        }
-        console.log(taskItem);
-        updateTaskItem(taskItem);
-      }
-      testing();
-      handleClose();
-      // window.location.reload();
-    }
     return (
       <>
         <p onClick={handleShow} className='editModalButton'>
@@ -83,10 +61,10 @@ type Id ={ Id: number}
             <br/>
             <textarea placeholder="What will you tell your underlings to do..." style={{ borderRadius: 5, height: 100, width: '100%' }}></textarea></Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="secondary" onClick={deleteTask}>
               Delete
             </Button>
-            <Button variant="primary" onClick={EditTask}>
+            <Button variant="primary" onClick={editTask}>
               Submit Edit
             </Button>
           </Modal.Footer>
