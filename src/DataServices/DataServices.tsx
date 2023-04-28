@@ -82,7 +82,7 @@ async function updateTaskItem(taskItem : object) {
 }
 
 async function getTaskItems() {
-    let res = await fetch(`https://tasktrackerbackendapi.azurewebsites.net/GetAllTaskItems`)
+    let res = await fetch(`https://tasktrackerbackendapi.azurewebsites.net/tasktracker/GetAllTaskItems`)
     let data = await res.json();
     return data;
 }
@@ -98,4 +98,13 @@ function loggedInData(){
     //this will consist of user ID and their Name.
 }
 
-export { loggedInData, getTaskItems, GetLoggedInUserData, login, createAccount, updateTaskItem, getUserInfoByID, addTaskItem}
+function checkToken() {
+    let result = false;
+    let lsData = localStorage.getItem('Token');
+    if(lsData != null){
+        result = true;
+    }
+    return result;
+}
+
+export { checkToken, loggedInData, getTaskItems, GetLoggedInUserData, login, createAccount, updateTaskItem, getUserInfoByID, addTaskItem}
