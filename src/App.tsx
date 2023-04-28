@@ -15,14 +15,15 @@ import CreateAccountComponent from './Components/CreateAccountComponent/CreateAc
 
 
 
+
 function App() {
   return (
     <BrowserRouter>
         <Routes>
           <Route path='/' element={<LoginComponent/>}/>          
           <Route path='/UsersLogin' element={<UsersLogin/>}/>
-          <Route path='/CreateAccountComponent' element={<CreateAccountComponent/>} />
           <Route path='/TaskTrackerComponent' element={<TaskTrackerComponent/>} />
+          <Route path='/CreateAccountComponent' element={<CreateAccountComponent/>} />
 
         </Routes>
         </BrowserRouter>
