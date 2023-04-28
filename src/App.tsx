@@ -11,7 +11,7 @@ import './Components/TaskTrackerComponent/TaskTrackerCard.css'
 import './Components/LoginComponent/LoginComponent.css'
 import './Components/LoginComponent/UsersLogin.css'
 import CreateAccountComponent from './Components/CreateAccountComponent/CreateAccountComponent';
-
+import './Components/CreateAccountComponent/CreateAccountComponent.css';
 
 
 
