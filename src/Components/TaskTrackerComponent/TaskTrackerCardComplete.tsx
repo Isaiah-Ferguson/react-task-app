@@ -50,7 +50,7 @@ export default function TaskTrackerCardProgressComplete() {
             <li>Complete</li>
             </Col>
             <Col className='d-flex justify-content-end'>
-            <TaskTrackerEditModal/>
+            <TaskTrackerEditModal Id={item.Id}/>
             </Col>
         </Row>
         <Row>
