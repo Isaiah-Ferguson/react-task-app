@@ -2,9 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import {Row, Form, Col} from 'react-bootstrap';
-import { Navigate } from 'react-router-dom';
-import { GetLoggedInUserData, addTaskItem } from '../../DataServices/DataServices';
-import { loggedInData } from '../../DataServices/DataServices';
+import { loggedInData, getTaskItems, addTaskItem } from '../../DataServices/DataServices';
 
 interface TaskTracker {
   id: number;
@@ -43,7 +41,7 @@ function TaskTrackerModal() {
     const testing = async () => {
       let ToDo = true;
       let InProgress = true;
-
+      getTaskItems();
       if(viewable === "To Do"){
         ToDo = true;
         InProgress = false;
@@ -68,8 +66,9 @@ function TaskTrackerModal() {
     }
     testing();
     handleClose();
-    // window.location.reload();
+    
   }
+  
 
 
   return (

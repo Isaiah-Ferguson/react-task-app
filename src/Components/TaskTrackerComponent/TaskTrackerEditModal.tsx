@@ -1,19 +1,98 @@
-
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import {Row, Col, Form} from 'react-bootstrap'
+import {Row, Form, Col} from 'react-bootstrap';
+import { Navigate } from 'react-router-dom';
+import { GetLoggedInUserData, updateTaskItem } from '../../DataServices/DataServices';
+import { loggedInData } from '../../DataServices/DataServices';
 
- export default function TaskTrackerEditModal() {
-    const [show, setShow] = useState(false);
-    const [viewable, setViewable] = useState("Select Privacy");
-    const [username, setUsername] = useState('');
-    const [title, setTitle]  = useState('');
+type Id = {
+   Id: number;
+  }
+
+ export default function TaskTrackerEditModal(props: Id) {
+
+  const [taskId, setTaskId] = useState(0);
+  const [show, setShow] = useState(false);
+  const [viewable, setViewable] = useState("To Do");
+  const [username, setUsername] = useState('');
+  const [title, setTitle]  = useState('');
+  const [ taskDescription, setTaskDescription] = useState('');
+    
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
   
   
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => { setViewable(event.target.value) };
+
+    const editTask = () => {
+      const testing = async () => {
+        let ToDo = false;
+        let InProgress = false;
+        let complete = false;
+        if(viewable === "To Do"){
+          ToDo = true;
+          InProgress = false;
+        }else if(viewable === "in Progress"){
+          InProgress = true;
+          ToDo = false;
+        }else{
+          complete = true;
+        }
+        const userNames = loggedInData();
+        console.log(props.Id);
+        const taskData = {
+          id: props.Id,
+          UserId: userNames.userId,
+          Date: new Date,
+          title: title,
+          userName: username,
+          description: taskDescription,
+          isToDo: ToDo,
+          isProgress: InProgress,
+          isCompleted: complete
+        }
+        console.log(taskData);
+        updateTaskItem(taskData);
+      }
+      testing();
+      handleClose();
+    }
+
+    const deleteTask = () => {
+      const testing = async () => {
+        let ToDo = false;
+        let InProgress = false;
+        let complete = false;
+        if(viewable === "To Do"){
+          ToDo = true;
+          InProgress = false;
+        }else if(viewable === "in Progress"){
+          InProgress = true;
+          ToDo = false;
+        }else{
+          complete = true;
+        }
+        const userNames = loggedInData();
+        console.log(props.Id);
+        const taskData = {
+          id: props.Id,
+          UserId: userNames.userId,
+          Date: new Date,
+          title: title,
+          userName: username,
+          description: taskDescription,
+          isToDo: false,
+          isProgress: false,
+          isCompleted: false,
+          isDeleted: true
+        }
+        console.log(taskData);
+        updateTaskItem(taskData);
+      }
+      testing();
+      handleClose();
+    }
   
     return (
       <>
@@ -49,7 +128,7 @@ import {Row, Col, Form} from 'react-bootstrap'
             <Button variant="secondary" onClick={handleClose}>
               Delete
             </Button>
-            <Button variant="primary" onClick={handleClose}>
+            <Button variant="primary" onClick={editTask}>
               Submit Edit
             </Button>
           </Modal.Footer>

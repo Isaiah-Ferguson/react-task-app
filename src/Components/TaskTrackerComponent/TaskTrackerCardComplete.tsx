@@ -42,7 +42,7 @@ export default function TaskTrackerCardProgressComplete() {
   return (
 
     <>
-    {tasks.filter((test) => test.isCompleted).map((item: TaskItem, idx: number) => {
+    {tasks.reverse().filter((test) => test.isCompleted).map((item: TaskItem, idx: number) => {
     return (
         <div key={idx} className='taskCard'>
         <Row>
@@ -50,7 +50,7 @@ export default function TaskTrackerCardProgressComplete() {
             <li>Complete</li>
             </Col>
             <Col className='d-flex justify-content-end'>
-            <TaskTrackerEditModal/>
+            <TaskTrackerEditModal Id={item.Id}/>
             </Col>
         </Row>
         <Row>

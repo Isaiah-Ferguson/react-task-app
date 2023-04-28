@@ -6,7 +6,7 @@ import { useNavigate, } from 'react-router-dom';
 
 interface TaskItem {
     Date: string;
-    Id: number;
+    id: number;
     UserId: number;
     isProgress: boolean;
     isCompleted: boolean;
@@ -29,7 +29,6 @@ export default function TaskTrackerCardProgress() {
           setBlogUserId(loggedIn.userId);
           setBlogPublisherName(loggedIn.publisherName);
           let userBlogItems = await getTaskItems();
-          console.log(userBlogItems);
           setTaskItem(userBlogItems);
         };
         if (!checkToken()) {
@@ -42,7 +41,7 @@ export default function TaskTrackerCardProgress() {
   return (
 
     <>
-    {tasks.filter((test) => test.isProgress).map((item: TaskItem, idx: number) => {
+    {tasks.reverse().filter((test) => test.isProgress).map((item: TaskItem, idx: number) => {
     return (
         <div key={idx} className='taskCard'>
         <Row>
@@ -50,7 +49,7 @@ export default function TaskTrackerCardProgress() {
             <li>in Progress</li>
             </Col>
             <Col className='d-flex justify-content-end'>
-            <TaskTrackerEditModal/>
+            <TaskTrackerEditModal Id={item.id} />
             </Col>
         </Row>
         <Row>
