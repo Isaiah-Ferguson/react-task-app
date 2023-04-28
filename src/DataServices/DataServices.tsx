@@ -49,7 +49,7 @@ interface userData {
   }
 
 async function addTaskItem(taskItem: object) {
-    const res = await fetch('https://tasktrackerbackendapi.azurewebsites.net',{
+    const res = await fetch('https://tasktrackerbackendapi.azurewebsites.net/TaskTracker/AddTaskItem',{
         method:"POST",
         headers:{
             'Content-Type':"application/json"
@@ -61,6 +61,7 @@ async function addTaskItem(taskItem: object) {
         throw new Error(message);
     }
     const data = await res.json();
+    console.log(data)
     return data;
 }
 
@@ -81,7 +82,7 @@ async function updateTaskItem(taskItem : object) {
 }
 
 async function getTaskItems() {
-    let res = await fetch(`https://tasktrackerbackendapi.azurewebsites.net`)
+    let res = await fetch(`https://tasktrackerbackendapi.azurewebsites.net/tasktracker/GetAllTaskItems`)
     let data = await res.json();
     return data;
 }
@@ -92,4 +93,18 @@ async function getUserInfoByID(userId: number) {
     return userInfoData;
 }
 
-export { getTaskItems, GetLoggedInUserData, login, createAccount, updateTaskItem, getUserInfoByID, addTaskItem}
+function loggedInData(){
+    return userData as userData;
+    //this will consist of user ID and their Name.
+}
+
+function checkToken() {
+    let result = false;
+    let lsData = localStorage.getItem('Token');
+    if(lsData != null){
+        result = true;
+    }
+    return result;
+}
+
+export { checkToken, loggedInData, getTaskItems, GetLoggedInUserData, login, createAccount, updateTaskItem, getUserInfoByID, addTaskItem}

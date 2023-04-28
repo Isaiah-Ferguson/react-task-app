@@ -5,8 +5,13 @@ import TaskTrackerCard from './TaskTrackerCard';
 import TaskTrackerCardProgress from "./TaskTrackerCardProgress";
 import TaskTrackerCardComplete from "./TaskTrackerCardComplete";
 import NavBarComponent from "../NavbarComponent/NavbarComponent";
+import { loggedInData, GetLoggedInUserData, checkToken, getTaskItems } from "../../DataServices/DataServices";
+import { useNavigate, } from 'react-router-dom';
+
+
 
 export default function TaskTrackerComponent() {
+
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     const [selectedSection, setSelectedSection] = useState('To Do');
 
@@ -21,7 +26,11 @@ export default function TaskTrackerComponent() {
       }
 
 
+
+
   return (
+
+
     <div className='container-fluid taskComponentBG'  style={{color: 'white'}}>
         <NavBarComponent/>
 
