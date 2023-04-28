@@ -125,7 +125,7 @@ type Id = {
             <br/>
             <textarea placeholder="What will you tell your underlings to do..." style={{ borderRadius: 5, height: 100, width: '100%' }}></textarea></Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="secondary" onClick={deleteTask}>
               Delete
             </Button>
             <Button variant="primary" onClick={editTask}>
