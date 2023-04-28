@@ -87,6 +87,12 @@ async function getTaskItems() {
     return data;
 }
 
+async function getAllUser() {
+    let res = await fetch(`https://tasktrackerbackendapi.azurewebsites.net/user/getallusers`)
+    let data = await res.json();
+    return data;
+}
+
 async function getUserInfoByID(userId: number) {
     let res = await fetch(``)
     let userInfoData = await res.json();
@@ -107,4 +113,4 @@ function checkToken() {
     return result;
 }
 
-export { checkToken, loggedInData, getTaskItems, GetLoggedInUserData, login, createAccount, updateTaskItem, getUserInfoByID, addTaskItem}
+export { getAllUser, checkToken, loggedInData, getTaskItems, GetLoggedInUserData, login, createAccount, updateTaskItem, getUserInfoByID, addTaskItem}

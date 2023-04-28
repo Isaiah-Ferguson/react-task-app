@@ -30,11 +30,12 @@ type Id = {
         let ToDo = false;
         let InProgress = false;
         let complete = false;
+        console.log(viewable)
         if(viewable === "To Do"){
           ToDo = true;
           InProgress = false;
           complete = false;
-        }else if(viewable === "in Progress"){
+        }else if(viewable === "In Progress"){
           InProgress = true;
           ToDo = false;
           complete = false;
@@ -44,7 +45,6 @@ type Id = {
           ToDo = false;
         }
         const userNames = loggedInData();
-        console.log(props.Id);
         const taskData = {
           id: props.Id,
           UserId: userNames.userId,
@@ -56,6 +56,7 @@ type Id = {
           isProgress: InProgress,
           isCompleted: complete
         }
+        console.log(taskData)
         updateTaskItem(taskData);
       }
       testing();
@@ -70,11 +71,15 @@ type Id = {
         if(viewable === "To Do"){
           ToDo = true;
           InProgress = false;
-        }else if(viewable === "in Progress"){
+          complete = false;
+        }else if(viewable === "In Progress"){
           InProgress = true;
           ToDo = false;
+          complete = false;
         }else{
           complete = true;
+          InProgress = false;
+          ToDo = false;
         }
         const userNames = loggedInData();
         console.log(props.Id);
@@ -90,7 +95,6 @@ type Id = {
           isCompleted: false,
           isDeleted: true
         }
-        console.log(taskData);
         updateTaskItem(taskData);
       }
       testing();
