@@ -68,6 +68,7 @@ function TaskTrackerModal() {
     }
     testing();
     handleClose();
+    window.location.reload();
   }
 
 
