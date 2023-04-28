@@ -60,14 +60,6 @@ export default function UsersLogin() {
                         </Link>
                     </Col>
                 </Row>
-                <Row className='mt-5'>
-                    <Col className='text-center'>
-                        <Link to="/TaskTrackerComponent">
-                            <Button className='Button1'>Submit</Button>
-                        </Link>
-                    </Col>
-                </Row>
-
 
 
             </Container>
